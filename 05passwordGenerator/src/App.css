@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #f4f4f5;
+  background: #09090f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+button,
+input {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+.password-page {
+  min-height: 100vh;
+  padding: 64px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 50% 0%, #25204a 0%, transparent 48%),
+    #09090f;
+}
+.password-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 32px;
+  border: 1px solid #30303d;
+  border-radius: 24px;
+  background: rgba(20, 20, 30, 0.94);
+  box-shadow: 0 24px 80px #0005;
+}
+.brand-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #a78bfa, #6366f1);
+  color: white;
+  font-size: 30px;
+  margin-bottom: 26px;
+}
+.eyebrow {
+  color: #a78bfa;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0 0 12px;
+}
+h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(30px, 6vw, 39px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin: 0;
+}
+h1 span {
+  display: block;
+  color: #a78bfa;
+}
+.subtitle {
+  color: #9999aa;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 14px 0 30px;
+}
+.field-label,
+.strength-row,
+.options-heading {
+  font-size: 13px;
+  font-weight: 600;
+}
+.field-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #d4d4dd;
+}
+.password-output {
+  display: flex;
+  gap: 8px;
+  padding: 7px;
+  border: 1px solid #414154;
+  border-radius: 13px;
+  background: #101019;
+}
+.password-output input {
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #c4b5fd;
+  padding: 10px 7px;
+  font-family: monospace;
+  font-size: 14px;
+}
+.copy-button {
+  flex-shrink: 0;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 9px;
+  background: #a78bfa;
+  color: #171324;
+  font-size: 12px;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+.copy-button:hover {
+  background: #c4b5fd;
+}
+.copy-button.copied {
+  background: #86efac;
+}
+.strength-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+.length-value {
+  color: #c4b5fd;
+}
+.length-slider {
+  width: 100%;
+  height: 5px;
+  margin: 20px 0 8px;
+  accent-color: #a78bfa;
+  cursor: pointer;
+}
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  color: #777789;
+  font-size: 11px;
+}
+.options-heading {
+  margin: 30px 0 12px;
+}
+.option-row {
+  min-height: 67px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border: 1px solid #343442;
+  border-radius: 12px;
+  background: #181822;
+  cursor: pointer;
+}
+.option-title,
+.option-description {
+  display: block;
+}
+.option-title {
+  font-size: 13px;
+  font-weight: 600;
+}
+.option-description {
+  margin-top: 5px;
+  color: #89899c;
+  font-size: 11px;
+}
+.option-row input {
+  width: 17px;
+  height: 17px;
+  accent-color: #a78bfa;
+  cursor: pointer;
+}
+.generate-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  margin-top: 22px;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(100deg, #a78bfa, #818cf8);
+  color: #171324;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 0.2s, filter 0.2s;
+}
+.generate-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+.generate-button span {
+  font-size: 20px;
+}
+.security-note {
+  margin: 22px 0 0;
+  color: #9292a4;
+  font-size: 11px;
+  line-height: 1.7;
+  text-align: center;
+}
+.security-note span {
+  color: #a78bfa;
+  margin-right: 5px;
+}
+.page-footer {
+  margin-top: 25px;
+  color: #696979;
+  font-size: 11px;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .password-page {
+    padding: 28px 14px 20px;
+  }
+.password-card {
+    padding: 24px 20px;
+    border-radius: 19px;
+  }
+.password-output input {
+    font-size: 12px;
+  }
+}
