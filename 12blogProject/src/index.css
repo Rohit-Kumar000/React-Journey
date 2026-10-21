@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Newsreader", Georgia, serif;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 antialiased font-sans;
+}
+
+/* Rich text (TinyMCE output) – Tailwind preflight removes default styles */
+.post-content { @apply text-lg leading-8 text-slate-700; }
+.post-content > * + * { @apply mt-5; }
+.post-content h1, .post-content h2, .post-content h3 { @apply font-serif font-semibold text-slate-900 leading-tight; }
+.post-content h1 { @apply text-4xl mt-10; }
+.post-content h2 { @apply text-3xl mt-10; }
+.post-content h3 { @apply text-2xl mt-8; }
+.post-content a { @apply text-indigo-600 underline underline-offset-2; }
+.post-content ul { @apply list-disc pl-6; }
+.post-content ol { @apply list-decimal pl-6; }
+.post-content li + li { @apply mt-1; }
+.post-content blockquote { @apply border-l-4 border-indigo-300 pl-4 italic text-slate-600; }
+.post-content img { @apply rounded-xl max-w-full h-auto; }
+.post-content pre { @apply bg-slate-900 text-slate-100 rounded-xl p-4 overflow-x-auto text-sm; }
+.post-content table { @apply w-full border-collapse; }
+.post-content td, .post-content th { @apply border border-slate-200 px-3 py-2; }
